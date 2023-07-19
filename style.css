@@ -2,11 +2,29 @@
   margin: 0px;
 }
 
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+.btn-primary {
+  color: #fff;
+  font-family: Work Sans;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  padding: 1.25rem 2rem;
+  border-radius: 48px;
+  background: linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%);
+  border: 0px;
+}
+
 /* navbar */
 
 .top-nav {
-  padding: 0 1.25rem;
+  padding: 0 1.5rem;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
 }
 
 .navbar {
@@ -73,11 +91,93 @@
   cursor: pointer;
 }
 
+/* banner */
+
+.banner-box {
+  padding: 0 1.5rem;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.banner-details {
+  width: 50%;
+}
+
+/* .banner-details svg {
+  position: absolute;
+  border: 1px solid chartreuse;
+  left: 0px;
+  width: 100%;
+  z-index: -2;
+} */
+
+.banner-details div {
+  max-width: 360px;
+}
+
+.banner-details div > h2 {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Work Sans;
+  font-size: 6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.banner-details div > p {
+  color: #534c64;
+  font-family: Work Sans;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.banner-details div > h3 {
+  color: #0b0223;
+  font-family: Work Sans;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-blue {
+  background: #4ec5f7;
+  margin-left: 2rem;
+}
+
+.banner-img {
+  width: 40%;
+}
+
+.banner-img img {
+  width: 100%;
+}
+
 /* responsive design for tablet */
 
 @media (max-width: 768px) {
   html {
     font-size: 13px;
+  }
+
+  .btn-primary {
+    margin-top: 1.3rem;
+    padding: 1rem 1.5rem;
+  }
+  .banner-details div > h2 {
+    font-size: 5.75rem;
+    margin-bottom: 1.3rem;
+  }
+  .banner-details div > h3 {
+    font-size: 2.75rem;
   }
 }
 
@@ -97,5 +197,18 @@
 
   .nav-socials {
     margin-top: 2rem;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .banner-details {
+    width: 50%;
+  }
+
+  .banner-img {
+    width: 75%;
   }
 }
