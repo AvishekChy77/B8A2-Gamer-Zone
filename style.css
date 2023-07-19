@@ -9,11 +9,11 @@ body {
 .btn-primary {
   color: #fff;
   font-family: Work Sans;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-top: 1.5rem;
-  padding: 1.25rem 2rem;
+  padding: 1rem 1.5rem;
   border-radius: 48px;
   background: linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%);
   border: 0px;
@@ -24,7 +24,6 @@ body {
 .top-nav {
   padding: 0 1.5rem;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
-  margin-bottom: 1rem;
 }
 
 .navbar {
@@ -94,7 +93,11 @@ body {
 /* banner */
 
 .banner-box {
-  padding: 0 1.5rem;
+  padding: 1rem 1.5rem;
+  background-image: url("./images/Group\ 14.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 50%;
 }
 
 .banner {
@@ -109,14 +112,6 @@ body {
   width: 50%;
 }
 
-/* .banner-details svg {
-  position: absolute;
-  border: 1px solid chartreuse;
-  left: 0px;
-  width: 100%;
-  z-index: -2;
-} */
-
 .banner-details div {
   max-width: 360px;
 }
@@ -127,7 +122,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Work Sans;
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -136,14 +131,14 @@ body {
 .banner-details div > p {
   color: #534c64;
   font-family: Work Sans;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
 .banner-details div > h3 {
   color: #0b0223;
   font-family: Work Sans;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -161,6 +156,71 @@ body {
   width: 100%;
 }
 
+/* section-3 */
+
+.section-3 {
+  display: flex;
+  justify-content: space-between;
+  margin: 45px auto;
+  max-width: 1240px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+
+.section-3-details {
+  position: relative;
+  width: 50%;
+}
+.section-3-details div {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+}
+.section-3-details h3 {
+  color: #0b0223;
+  text-align: right;
+  font-family: Work Sans;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.radiant {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-3-details p {
+  color: #534c64;
+  text-align: right;
+  font-family: Work Sans;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.section-3-image {
+  width: 30%;
+  max-height: 25rem;
+  position: relative;
+}
+
+.section-3-image > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.section-3-image div > img {
+  position: absolute;
+  left: -4.5rem;
+  bottom: -3rem;
+  width: 10rem;
+  height: 12rem;
+}
+
 /* responsive design for tablet */
 
 @media (max-width: 768px) {
@@ -170,20 +230,35 @@ body {
 
   .btn-primary {
     margin-top: 1.3rem;
-    padding: 1rem 1.5rem;
   }
+
   .banner-details div > h2 {
-    font-size: 5.75rem;
+    font-size: 4.75rem;
     margin-bottom: 1.3rem;
   }
+
   .banner-details div > h3 {
-    font-size: 2.75rem;
+    font-size: 2.25rem;
+  }
+
+  .section-3-image div > img {
+    position: absolute;
+    left: -4rem;
+    bottom: -2.75rem;
+    width: 8.5rem;
+    height: 10rem;
+  }
+  .section-3-details div {
+    left: 20%;
+  }
+  .section-3-details h3 {
+    font-size: 2.5rem;
   }
 }
 
 /* responsive design for mobile */
 
-@media (max-width: 576px) {
+@media (max-width: 450px) {
   .navbar {
     flex-direction: column;
     padding-top: 3rem;
@@ -199,16 +274,54 @@ body {
     margin-top: 2rem;
   }
 
+  .banner-box {
+    background-position: bottom left;
+    background-size: 85%;
+  }
+
   .banner {
     flex-direction: column-reverse;
-    gap: 30px;
+    gap: 60px;
+  }
+
+  .banner-details div > h2 {
+    font-size: 4.25rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .banner-details div > h3 {
+    font-size: 2rem;
   }
 
   .banner-details {
-    width: 50%;
+    width: auto;
   }
 
   .banner-img {
     width: 75%;
+  }
+
+  .section-3 {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .section-3-image {
+    width: 50%;
+  }
+
+  .section-3-details {
+    width: auto;
+  }
+
+  .section-3-details div {
+    position: static;
+    transform: none;
+  }
+
+  .section-3-details p,
+  .section-3-details h3 {
+    text-align: center;
   }
 }
