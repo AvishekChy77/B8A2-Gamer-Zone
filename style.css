@@ -161,7 +161,7 @@ body {
 .section-3 {
   display: flex;
   justify-content: space-between;
-  margin: 45px auto;
+  margin: 90px auto;
   max-width: 1240px;
   padding: 0px 20px;
   box-sizing: border-box;
@@ -246,7 +246,7 @@ body {
 }
 
 .section-2-details p,
-.section-2-img div p {
+.section-2-img div > p {
   color: #534c64;
   font-family: Work Sans;
   font-size: 1rem;
@@ -268,10 +268,95 @@ body {
   width: 18rem;
 }
 
-.section-2-img div img {
+.image {
+  position: relative;
   width: 18rem;
 }
 
+.image-img {
+  display: block;
+  width: 100%;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.image-overlay:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.image-overlay div {
+  width: auto;
+}
+
+.image-overlay p {
+  font-family: Work Sans;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Games list */
+
+.section-4 {
+  padding: 0 1.5rem;
+}
+
+.games {
+  max-width: 1200px;
+  margin: 120px auto 80px auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 2rem; */
+  align-items: center;
+  justify-content: space-around;
+}
+
+.games div > h3 {
+  color: #0b0223;
+  font-family: Work Sans;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.games div {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 5px;
+}
+
+.games div:hover {
+  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid #ff42a5;
+}
+
+.games div:hover h3 {
+  color: #ff42a5;
+}
+
+.games div img {
+  width: 20%;
+}
 /* footer */
 
 footer {
@@ -300,8 +385,12 @@ footer .site-logo p {
   flex-wrap: wrap;
   gap: 1.5rem;
 }
+.type-1 img {
+  width: 15%;
+}
 
-.type-2 {
+.type-2,
+.type-3 {
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
   font-family: Work Sans;
@@ -311,7 +400,13 @@ footer .site-logo p {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.type-2 {
   gap: 1.5rem;
+}
+.type-3 {
+  gap: 0.5rem;
 }
 /* responsive design for tablet */
 
@@ -351,11 +446,16 @@ footer .site-logo p {
     gap: 2rem;
     padding: 50px;
   }
+
+  .games {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* responsive design for mobile */
 
-@media (max-width: 450px) {
+@media (max-width: 576px) {
   .navbar {
     flex-direction: column;
     padding-top: 3rem;
@@ -429,5 +529,18 @@ footer .site-logo p {
   .section-2-details p,
   .section-2-img div p {
     font-size: 0.75rem;
+  }
+
+  .games {
+    gap: 2rem 0.2rem;
+  }
+
+  .games div > h3 {
+    font-size: 0.7rem;
+  }
+
+  .games div {
+    gap: 0.25rem;
+    margin-bottom: 0;
   }
 }
